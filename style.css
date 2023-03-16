@@ -1,0 +1,529 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #080c20;
+    color: white;
+    font-family: Manrope, sans-serif; 
+}
+
+p{
+    font-size: 13px;
+    opacity: 0.4;
+    line-height: 20px;
+}
+
+@keyframes toptext{
+    0%{opacity: 0; margin-top: -150px;}
+    100%{opacity: 1; margin-top: 0px}
+}
+
+@keyframes span{
+    0%{color: red;}
+    20%{color: #3ee9e5;}
+    40%{color: yellow;}
+    60%{color:green;}
+    80%{color: blue;}
+    100%{color: #3ee9e5;}
+}
+
+@keyframes imgL{
+    0%{right: 400px;}
+    100%{right: 0px;}
+}
+
+@keyframes imgR{
+    0%{left: 400px;}
+    100%{left: 0px;}
+}
+
+@keyframes feature1{
+    0%{opacity: 0; margin-top: -30%;}
+    100%{opacity: 1; margin-top: 0px;}
+}
+
+@keyframes feature2{
+    0%{opacity: 0; margin-bottom: -30%;}
+    100%{opacity: 1; margin-bottom: 0px;}
+}
+
+
+nav{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.mq-top-image-container{
+    display: none;
+}
+
+#top{
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-mobile-image{
+    width: 100%;
+}
+
+.top-mobile-image img{
+    width: 100%;
+}
+
+#top-intro{
+    width: 100%;
+    padding: 20px 35px;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+    padding-inline: 27px;
+    margin-bottom: 15px;
+}
+
+#top-intro h2 span{
+    color: #3ee9e5;
+    animation: span 10s ease-in-out 1s infinite;
+}
+
+#scroll-icon{
+    width: 100%;
+    text-align: center;
+}
+
+#features-container{
+    width: 100%;
+    height: 1150px;
+    margin: 100px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature{
+    width: 100%;
+    padding: 15px 35px;
+    text-align: center;
+}
+
+.feature p, #pricing-plans-text p{
+    padding-top: 5px;
+}
+
+ .feature-icon-container{
+    background-color: #045381;
+    border-radius: 50px;
+    height: 140px;
+    width: 140px;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+}
+
+#pricing-plans-text{
+    width: 85%;
+    text-align: center;
+    margin: 120px auto 35px auto;
+}
+
+#pricing-plans-text h3{
+    margin-bottom: 20px;
+}
+
+#prices{
+    width: 100%;
+    height: 815px;
+    padding-inline: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricing-container{
+    position: relative;
+    padding-top: 23px;
+}
+
+.pricing-icon{
+    position: absolute;
+    top: 0px;
+    left: 25px;
+}
+
+.payment-plan{
+    border-radius: 5px; 
+}
+
+.free-plan{
+    background-color: #045381;
+    padding: 45px 35px 20px 25px;    
+}
+
+.paid-plan{
+    background-color: #3ee9e5;
+    color: #080c20;
+    padding: 60px 30px 20px 25px;
+}
+
+.paid-plan h1{
+    font-weight: 800;
+}
+
+.paid-plan h1 span{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.payment-plan h4{
+    margin-bottom: 20px;
+}
+
+h1{
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+li{
+    list-style-type: none;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+li svg{
+    margin-right: 10px;
+}
+
+footer{
+    margin-top: 85px;
+    margin-bottom: 70px;
+}
+
+#sign-up-text{
+    width: 100%;
+    background-image: url(Images/bg-footer-squiggle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 90px;
+}
+
+#sign-up-form{
+    padding-inline: 25px;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-item{
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
+input[type="email"]{
+    background-color: #045381;
+    color: white;
+    outline: none;
+}
+
+input[type="email"]::placeholder{
+    color: lightgrey;
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+button{
+    text-align: center;
+    background-color: #3ee9e5;
+    color: #080c20;
+    font-weight: 700;
+}
+
+.btn:hover{
+    cursor: pointer;
+    border: 2px solid #3ee9e5;
+    background-color: #080c20;
+    color: #3ee9e5;
+}
+
+.btn:active{
+    border: none;
+    opacity: 0.6;
+}
+
+
+@media(min-width: 576px){
+    nav{
+        text-align: left;
+        height: 100px;
+        padding: 30px;
+    }
+
+    #top-intro{
+        padding: 15px;
+    }
+
+    #top-intro h2{
+        margin-bottom: 15px;
+    }
+
+    .mq-top{
+        height: 300px;
+        display: flex;
+        overflow-x: hidden;
+    }
+
+    .mq-top-image-container{
+        position: relative;
+        display: block;
+        width: 40%;
+        
+    }
+
+    .mq-top img{
+        width: 235px;
+        height: 300px;
+        position: absolute;
+    }
+
+    #left-image{
+        right: 0px;
+    }
+
+    #right-image{
+        left: 0px;
+    }
+
+    #top{
+        display: block;
+        height: 250px;
+        background: url(Images/bg-hero-squiggle.svg) center no-repeat;
+        background-size: contain;
+        align-self: center;
+    }
+
+    #scroll-icon{
+        margin-top: 10px;
+    }
+
+    .top-mobile-image{
+        display: none;
+    }
+
+    #features-container{
+        height: 690px;
+        width: 580px;
+        margin-inline: auto;
+    }
+
+    .feature{
+        width: 505px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .feature:nth-child(odd){
+        align-self: end;
+    }
+
+    .feature:nth-child(even){
+        align-self: start;
+    }
+
+    .feature-icon-container{
+        margin: 0px;
+    }
+
+    .feature-text{
+        text-align: left;
+        width: 285px;
+    }
+
+    #pricing-plans-text{
+        margin-inline: auto;
+        width: 70%;
+    }
+
+    #prices{
+        height: 780px;
+        margin-inline: auto;
+        width: 65%;
+    }
+
+    footer{
+        background: url(Images/bg-footer-squiggle.svg) center no-repeat;
+        background-size: 100%;
+        height: 95px;
+    }
+
+    #sign-up-text{
+        background-image: none;
+    }
+
+    #sign-up-form{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-inline: auto;
+        width: 435px;
+        height: 45px;
+    }
+
+    input[type="email"]{
+        width: 260px;
+    }
+
+    .btn{
+        width: 115px;
+    }
+}
+
+@media(min-width: 768px){
+    nav{
+        text-align: left;
+        height: 100px;
+        padding: 30px;
+    }
+
+    .mq-top{
+        overflow-y: visible;
+        height: 485px;
+    }
+
+    .mq-top img{
+        width: 380px;
+        height: 445px;
+    }
+
+    #left-image{
+        animation: imgL 1.5s ease-out;
+    }
+
+    #right-image{
+        animation: imgR 1.5s ease-out;
+    }
+
+    #top{
+        padding: 50px;
+        align-self: start;
+        height: 75%;
+        animation: toptext 1.5s ease-in-out;
+    }
+
+    #top-intro h2{
+        width: 70%;
+        margin-inline: auto;
+    }
+
+    #top-intro p{
+        margin-inline: auto;
+        width: 80%;
+    }
+
+    #scroll-icon svg{
+        margin-top: 70px;
+    }
+
+    #features-container{
+        flex-direction: row;
+        height: 310px;
+        width: 75%;
+        margin: 150px auto 0px auto;
+    }
+
+    .feature{
+        flex-direction: column;
+        align-items: start;
+        margin: 0px;
+        padding: 0px;
+        width: 215px;
+        opacity: 0;
+    }
+
+    .feature:nth-child(odd){
+        align-self: start;
+    }
+
+    .feature:nth-child(even){
+        align-self: end;
+    }
+
+    .animate1{
+        animation-name: feature1;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .animate2{
+        animation-name: feature2;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .feature-text{
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .feature-text h4{
+        margin-bottom: 10px;
+    }
+
+    #pricing-plans-text{
+        width: 35%;
+    }
+
+    #prices{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        width: 63%;
+    }
+
+    @keyframes price{
+        0%{transform: scale(0.95, 0.95);}
+        100%{transform: scale(1.01, 1.01);}
+    }
+
+    .pricing-container{
+        width: 370px;
+        animation: price 2s ease-in-out infinite alternate;
+    }
+
+    footer{
+        height: 185px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @keyframes btn{
+        0%{transform: rotate(10deg);}
+        100%{transform: rotate(-10deg);}
+    }
+
+    .btnAnimate{
+        animation: btn 0.1s linear 5 alternate;
+    }
+}
